@@ -8,7 +8,7 @@ var sequence = [];
 var actualRound = 0;
 var seqPos = 0;
 var gameOver = false;
-
+var reload = document.querySelector("#reload");
 
 preloadImages("imagens/x.png","imagens/ball.png")
 atualizaMostrador();
@@ -120,5 +120,10 @@ async function verificarVencedor() {
 function sleep(ms)
 {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+reload.addEventListener('click',reiniciar);
+
+function reiniciar(){
+    reload = window.location.reload()
 }
 
